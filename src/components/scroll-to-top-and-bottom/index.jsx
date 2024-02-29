@@ -34,7 +34,8 @@ const ScrollToTopAndBottom = () => {
     return (<div>
         <h1>Scroll To Top And Bottom Feature</h1>
         <h3>This is the top section</h3>
-        <button>Scroll To Bottom</button>
+        <button type="button">Scroll To Bottom</button>
+        
         {
             products && products.length ? 
             products.map(item => 
@@ -43,7 +44,8 @@ const ScrollToTopAndBottom = () => {
                 </div>)
             : null
         }
-        <button>Scroll To Top</button>
+
+        <button type="button">Scroll To Top</button>
         <h3>This is the bottom of the page</h3>
     </div>)
 };
