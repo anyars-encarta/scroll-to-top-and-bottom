@@ -4,7 +4,7 @@ const ScrollToTopAndBottom = () => {
 
     const { data, error, loading } = UseFetch(
         "https://dummyjson.com/products?limit=100",
-        {}
+        {},
     );
 
     if (error) {
@@ -23,23 +23,25 @@ const ScrollToTopAndBottom = () => {
         // something
     };
 
-    return (<div>
-        <h1>Scroll To Top And Bottom Feature</h1>
-        <h3>This is the top section</h3>
-        <button type="button" onClick={handleScrollToBottom}>Scroll To Bottom</button>
+    return (
+        <div>
+            <h1>Scroll To Top And Bottom Feature</h1>
+            <h3>This is the top section</h3>
+            <button type="button" onClick={handleScrollToBottom}>Scroll To Bottom</button>
 
-        <ul>
-            {
-                data && data.products && data.products.length ?
-                    data.products.map(item =>
-                        <li key={item.id}>{item.title}</li>)
-                    : null
-            }
-        </ul>
+            <ul>
+                {
+                    data && data.products && data.products.length ?
+                        data.products.map(item =>
+                            <li key={item.id}>{item.title}</li>)
+                        : null
+                }
+            </ul>
 
-        <button type="button" onClick={handleScrollToTop}>Scroll To Top</button>
-        <h3>This is the bottom of the page</h3>
-    </div>)
+            <button type="button" onClick={handleScrollToTop}>Scroll To Top</button>
+            <h3>This is the bottom of the page</h3>
+        </div>
+    )
 };
 
 export default ScrollToTopAndBottom;
