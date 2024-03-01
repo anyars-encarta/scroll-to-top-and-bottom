@@ -24,6 +24,7 @@ const UseFetch = (url, options = {}) => {
     
     useEffect(() => {
         fetchData();
+        // eslint-disable-next-line
     }, [url])
 
     return { data, error, loading }
