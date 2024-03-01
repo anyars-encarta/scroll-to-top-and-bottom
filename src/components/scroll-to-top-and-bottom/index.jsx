@@ -29,15 +29,13 @@ const ScrollToTopAndBottom = () => {
             <h3>This is the top section</h3>
             <button type="button" onClick={handleScrollToBottom}>Scroll To Bottom</button>
 
-            <ul>
                 {
                     data && data.products && data.products.length ?
                         data.products.map(item =>
-                            <li key={item.id}>{item.title}</li>)
+                            <p key={item.id}>{item.title}</p>)
                         : null
                 }
-            </ul>
-
+           
             <button type="button" onClick={handleScrollToTop}>Scroll To Top</button>
             <h3>This is the bottom of the page</h3>
         </div>
